@@ -1,0 +1,7 @@
+{
+    "iis.configDir": "",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.wordWrap": "bounded",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    
+}

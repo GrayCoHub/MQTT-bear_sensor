@@ -1,0 +1,34 @@
+On the highest level, this exercise involves developing better use of the vsCode extensions.  
+All the installed extensions were disabled in this workspace.  I hope to better manage the extensions in this project and all future projects. 
+Only the specific extensions, and those "basic" vsCode extensions, will be enabled (Prettier, Code Runner, Github Copilot, Gitlens, and Live Server). 
+Note: there will be more extensions running than those extensions I installed/enabled for this project because extentions will install additional extensions that are depenedencies for the main extension.
+The vsCode settings.json file will be used to manage the extensions.  Note: there are two settings.json files in vsCode.  One is for the ongoing vsCode settings file (not being changed here) and the other is the settings.json file for this project/ workspace.  
+
+```
+    {
+        "iis.configDir": "",
+        "editor.bracketPairColorization.enabled": true,
+        "editor.wordWrap": "bounded",
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+```
+
+
+The python code:
+
+A python venv was created for this folder:  
+
+    C:\all_programming\MQTT_vsCode_explore
+
+The python script file (mqtt.py) uses the python library, pahomqtt.client, to connect to the MQTT broker,  
+
+    broker.mqtt-dashboard.com 
+    
+and subscribe to the bear_sensor topic.  The script will print the messages received from the broker ... aka the remote PIR sensor monitoring the garbage can.
+
+There was an issue first running/compiling this python script file.  It had to do with this python referencing a typing module that is not included with the version of python being used in this venv ... 3.7.4.  It seems this typing_extension is only avaiable after python 3.8.
+
+Results:
+
+The code is displaying the bear_sensor messages in the vsCode terminal.  
+
